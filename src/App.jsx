@@ -2,6 +2,7 @@
 import './App.css'
 import Cabecalho from './components/Cabecalho';
 import DataTable from './components/DataTable';
+import EnableColorOnDarkAppBar from './components/EnableColorOnDarkAppBar';
 
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
   return (
     <>
       <div>
-        <Cabecalho/>
+          <Cabecalho />
+
       </div>
       <div>
         <DataTable />
