@@ -1,7 +1,7 @@
 
 import './App.css'
+import Cabecalho from './components/Cabecalho';
 import DataTable from './components/DataTable';
-
 
 
 function App() {
@@ -9,8 +9,12 @@ function App() {
 
   return (
     <>
-
-          <DataTable /> 
+      <div>
+        <Cabecalho/>
+      </div>
+      <div>
+        <DataTable />
+      </div>
     </>
   )
 }
