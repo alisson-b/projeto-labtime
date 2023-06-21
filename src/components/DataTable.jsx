@@ -42,7 +42,7 @@ export default function DataTable() {
 
 
   return (
-    <Box className='table-geral' sx={{ height: 400, width: '100%' }}>
+    <Box className='table-geral' sx={{ height: '100%', width: '100%' }}>
       {myArray && <DataGrid
         getRowId={(row) => row.codigo}
         rows={myArray}
@@ -50,11 +50,11 @@ export default function DataTable() {
         initialState={{
           pagination: {
             paginationModel: {
-              pageSize: 25,
+              pageSize: 20,
             },
           },
         }}
-        pageSizeOptions={[25]}
+        pageSizeOptions={[20]}
         // checkboxSelection
         disableRowSelectionOnClick
       />}
