@@ -9,7 +9,6 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import FormatListNumberedIcon from '@mui/icons-material/FormatListNumbered';
-import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
@@ -88,6 +87,7 @@ const Cabecalho = () => {
             >
               LabTIME
             </Typography>
+
             <Search>
               <SearchIconWrapper>
                 <SearchIcon />
