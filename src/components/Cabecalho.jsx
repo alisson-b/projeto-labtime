@@ -12,6 +12,8 @@ import FormatListNumberedIcon from '@mui/icons-material/FormatListNumbered';
 import SearchIcon from '@mui/icons-material/Search';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import ButtonRadio from './ButtonRadio';
+import { useState } from 'react';
+import DataTable from './DataTable';
 
 const darkTheme = createTheme({
   palette: {
@@ -64,7 +66,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const Cabecalho = () => {
+const Cabecalho = ({}) => {
+
+  const [valorRadio, setValorRadio] = useState('inicial');
+
   return (
     <Box className='table-geral' sx={{ flexGrow: 1 }}>
 
@@ -81,14 +86,14 @@ const Cabecalho = () => {
               <FormatListNumberedIcon />
             </IconButton>
             <Typography
-              variant="h6"
+              variant="h4"
               noWrap
               component="div"
               sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
             >
               LabTIME
             </Typography>
-            <ButtonRadio/>
+            <ButtonRadio setValorRadio={setValorRadio} />
             <Search className='botton-search'>
               <SearchIconWrapper>
                 <SearchIcon />
@@ -101,6 +106,7 @@ const Cabecalho = () => {
           </Toolbar>
         </AppBar>
       </ThemeProvider>
+      <DataTable />
     </Box>
   );
 }
