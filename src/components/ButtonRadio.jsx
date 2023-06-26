@@ -17,8 +17,8 @@ const ButtonRadio = ({setValorRadio}) => {
         aria-labelledby="demo-row-radio-buttons-group-label"
         name="row-radio-buttons-group"
       >
-        <FormControlLabel value="nome-social" control={<Radio/>} label="Nome Social" />
-        <FormControlLabel value="nome-completo"  control={<Radio />} label="Nome Completo" />
+        <FormControlLabel value="nomeSocial" control={<Radio/>} label="Nome Social" />
+        <FormControlLabel value="nomeCompleto"  control={<Radio />} label="Nome Completo" />
         <FormControlLabel value="email" control={<Radio />} label="E-mail" />
         
       </RadioGroup>

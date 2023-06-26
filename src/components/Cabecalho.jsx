@@ -70,6 +70,8 @@ const Cabecalho = ({}) => {
 
   const [valorRadio, setValorRadio] = useState('inicial');
 
+  const [search, setSearch] = useState('');
+
   return (
     <Box className='table-geral' sx={{ flexGrow: 1 }}>
 
@@ -94,11 +96,14 @@ const Cabecalho = ({}) => {
               LabTIME
             </Typography>
             <ButtonRadio setValorRadio={setValorRadio} />
-            <Search className='botton-search'>
+            <Search  className='botton-search'>
               <SearchIconWrapper>
                 <SearchIcon />
               </SearchIconWrapper>
               <StyledInputBase
+                onChange={
+                  (e) => (setSearch(e.target.value))
+                }
                 placeholder="Search…"
                 inputProps={{ 'aria-label': 'search' }}
               />
@@ -106,7 +111,7 @@ const Cabecalho = ({}) => {
           </Toolbar>
         </AppBar>
       </ThemeProvider>
-      <DataTable />
+      <DataTable search={search} valorRadio={valorRadio} />
     </Box>
   );
 }

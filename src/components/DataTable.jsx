@@ -9,19 +9,25 @@ import './DataTable.css'
 
 
 
-export default function DataTable() {
+
+export default function DataTable({search, valorRadio}) {
 
   const [myArray, setMyArray] = useState();
 
 
   useEffect(() => {
-    api
-      .get("/selecao-2023/usuarios")
+    const getData = setTimeout(() => {
+       api
+      .get(`/selecao-2023/usuarios?filtro=${search}`)
       .then((response) => setMyArray(response.data))
       .catch((err) => {
         console.error("Ops! Ocorreu um erro!" + err);
       });
-  }, []);
+    }, 1000)
+
+    return () => clearTimeout(getData)
+   
+  }, [search]);
 
   const columns = [
     { field: 'codigo', headerName: 'ID', width: 70 },
