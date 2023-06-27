@@ -28,9 +28,7 @@ export default function DataTable() {
     { field: 'nomeSocial', headerName: 'Nome social', width: 130 },
     { field: 'nomeCompleto', headerName: 'Nome completo', width: 260 },
     {
-      field: 'sexo',
-      headerName: 'Sexo',
-      width: 90,
+      field: 'sexo', headerName: 'Sexo',  width: 90,
     },
     {
       field: 'email',

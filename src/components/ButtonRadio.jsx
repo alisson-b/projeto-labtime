@@ -15,9 +15,9 @@ const ButtonRadio = () => {
         aria-labelledby="demo-row-radio-buttons-group-label"
         name="row-radio-buttons-group"
       >
-        <FormControlLabel value="nome-social" control={<Radio />} label="Nome Social" />
-        <FormControlLabel value="nome-completo" control={<Radio />} label="Nome Completo" />
-        <FormControlLabel value="email" control={<Radio />} label="E-mail" />
+        <FormControlLabel onChance={() => setButtonRa(e.target.value)} value="nome-social" control={<Radio />} label="Nome Social" />
+        <FormControlLabel onChance={() => setButtonRa(e.target.value)} value="nome-completo" control={<Radio />} label="Nome Completo" />
+        <FormControlLabel onChance={() => setButtonRa(e.target.value)} value="email" control={<Radio />} label="E-mail" />
       </RadioGroup>
     </FormControl>
   );

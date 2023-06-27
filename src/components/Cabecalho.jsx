@@ -65,6 +65,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const Cabecalho = () => {
+
   return (
     <Box className='table-geral' sx={{ flexGrow: 1 }}>
 
