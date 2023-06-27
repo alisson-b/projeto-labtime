@@ -10,8 +10,7 @@ function App() {
   return (
     <>
       <div>
-          <Cabecalho />
-
+        <Cabecalho />
       </div>
       <div>
         <DataTable />
