@@ -104,7 +104,7 @@ const Cabecalho = () => {
                 onChange={
                   (e) => (setSearch(e.target.value))
                 }
-                placeholder="Search…"
+                placeholder="Pesquisar…"
                 inputProps={{ 'aria-label': 'search' }}
               />
             </Search>
