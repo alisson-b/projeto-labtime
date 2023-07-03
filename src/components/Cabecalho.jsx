@@ -95,7 +95,7 @@ const Cabecalho = () => {
             >
               LabTIME
             </Typography>
-            <ButtonRadio setValorRadio={setValorRadio} />
+              {/*<ButtonRadio setValorRadio={setValorRadio} />*/}   
             <Search  className='botton-search'>
               <SearchIconWrapper>
                 <SearchIcon />
