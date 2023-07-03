@@ -66,9 +66,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const Cabecalho = ({}) => {
+const Cabecalho = () => {
 
-  const [valorRadio, setValorRadio] = useState('inicial');
+  const [valorRadio, setValorRadio] = useState('');
 
   const [search, setSearch] = useState('');
 

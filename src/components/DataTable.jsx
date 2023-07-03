@@ -10,23 +10,23 @@ import './DataTable.css'
 
 
 
-export default function DataTable({search, valorRadio}) {
+export default function DataTable({ search, valorRadio }) {
 
   const [myArray, setMyArray] = useState();
 
 
   useEffect(() => {
     const getData = setTimeout(() => {
-       api
-      .get(`/selecao-2023/usuarios?filtro=${search}`)
-      .then((response) => setMyArray(response.data))
-      .catch((err) => {
-        console.error("Ops! Ocorreu um erro!" + err);
-      });
-    }, 1000)
+      api
+        .get(`/selecao-2023/usuarios?filtro=${search}`)
+        .then((response) => setMyArray(response.data))
+        .catch((err) => {
+          console.error("Ops! Ocorreu um erro!" + err);
+        });
+    }, 500)
 
     return () => clearTimeout(getData)
-   
+
   }, [search]);
 
   const columns = [
